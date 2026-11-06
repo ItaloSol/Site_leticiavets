@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leticia Vets · Médica veterinária que cuida do seu pet em casa · Goiânia</title>
+<meta name="description" content="Atendimento domiciliar e pet sitting feito por uma médica veterinária em Goiânia. Visitas, medicação, alimentação e acompanhamento para cães e gatos.">
+<meta property="og:title" content="Leticia Vets · Seu pet cuidado em casa por uma médica veterinária">
+<meta property="og:description" content="Visitas, medicação, hospedagem felina e acompanhamento para cães e gatos em Goiânia.">
+<meta property="og:image" content="assets/leticia-hero.webp">
+<meta name="theme-color" content="#6B1D2C">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url(assets/fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Albert Sans";src:url(assets/fonts/albert-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Albert Sans";src:url(assets/fonts/albert-sans-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Albert Sans";src:url(assets/fonts/albert-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{
+  --ink:#1E1416; --ink-soft:#4A3C3F; --muted:#76666A;
+  --paper:#FBF7F5; --paper-2:#F4ECE9; --line:#E7DAD6;
+  --wine:#6B1D2C; --wine-deep:#4C1220; --wine-ink:#3A0D18;
+  --blush:#F2C6CF; --rose:#F7B5C3; --aqua:#A6E1E6; --butter:#F3D79B;
+  --radius-xl:40px; --radius-l:28px; --radius-m:18px;
+  --display:"Bricolage Grotesque", "Arial Narrow", sans-serif;
+  --body:"Albert Sans", system-ui, sans-serif;
+  --wrap:1240px; --gutter:clamp(20px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-.02em;margin:0}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--wine);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--wine);color:#fff;padding:10px 16px;border-radius:10px;z-index:100}
+.skip:focus{top:12px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--body);text-decoration:none;border-radius:999px;padding:16px 24px;transition:transform .2s ease,background .2s ease,color .2s ease;cursor:pointer;border:0}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:var(--wine-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-light{background:var(--paper);color:var(--wine-ink)}
+.btn-light:hover{background:var(--blush);transform:translateY(-2px)}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-logo{height:60px;width:auto}
+.brand-mark{width:36px;height:36px;border-radius:10px;background:var(--wine);color:#fff;display:grid;place-items:center;font:800 15px/1 var(--display);letter-spacing:-.04em}
+.brand-name{font:800 20px/1 var(--display);letter-spacing:-.03em}
+.brand-name small{display:block;font:500 11px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav-links{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:15px;color:var(--ink-soft);padding:6px 0;border-bottom:1.5px solid transparent;transition:border-color .2s,color .2s}
+.nav-links a:hover{color:var(--ink);border-color:var(--ink)}
+.nav-cta{display:flex;gap:8px}
+.pill-link{font:600 14px/1 var(--body);text-decoration:none;padding:11px 18px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--ink);transition:background .2s,color .2s}
+.pill-link:hover{background:var(--ink);color:var(--paper)}
+.pill-link.solid{background:var(--wine);color:#fff;box-shadow:none}
+.pill-link.solid:hover{background:var(--wine-deep)}
+
+/* HERO */
+.hero{padding:clamp(12px,2vw,28px) 0 0;overflow:hidden}
+.hero-grid{position:relative}
+.hero-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,300px);gap:32px;align-items:start;position:relative;z-index:3}
+.eyebrow{font:500 clamp(15px,1.5vw,20px)/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.mega{font-size:clamp(84px,10.6vw,154px);line-height:.8;letter-spacing:-.05em;margin-top:clamp(6px,1vw,14px);color:var(--ink);white-space:nowrap}
+.mega .sr-only{white-space:normal}
+.hero-note{display:grid;grid-template-columns:48px 1fr;gap:16px;padding-top:clamp(20px,2.6vw,40px)}
+.note-badge{width:48px;height:70px;border-radius:999px;background:var(--rose);display:grid;place-items:center;color:var(--wine-ink)}
+.note-badge svg{width:24px;height:24px}
+.hero-note p{font-size:16px;line-height:1.5;color:var(--ink-soft)}
+.hero-note .btn{margin-top:18px;padding:14px 20px;font-size:15px;white-space:nowrap}
+
+.stage{position:relative;margin-top:clamp(-28px,-1.8vw,-14px);z-index:2}
+.rail-cta{margin-top:18px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.rail-cta .btn{padding:15px 22px}
+.rail-more svg{width:15px;height:15px;transform:rotate(90deg);vertical-align:-2px;margin-left:4px}
+.rail-more{color:#F3D9DF;font-size:15px;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(243,217,223,.4);padding-bottom:2px}
+.rail-more:hover{color:#fff;border-color:#fff}
+.ring{background:var(--blush);border-radius:var(--radius-xl);padding:clamp(10px,1.2vw,16px)}
+.card{position:relative;background:#2A0C15;border-radius:calc(var(--radius-xl) - 10px);min-height:clamp(360px,28vw,400px);
+  background-image:radial-gradient(38% 80% at 62% 100%,rgba(242,198,207,.30) 0,transparent 70%),radial-gradient(70% 90% at 0% 0%,#3D111D 0,transparent 70%)}
+.services-rail{position:absolute;left:clamp(28px,4.5vw,64px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:20px;z-index:2;width:50%}
+.rail-item{display:flex;align-items:center;gap:0}
+.rail-item:nth-child(2){margin-left:-14px}
+.rail-item:nth-child(3){margin-left:8px}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font:700 clamp(15px,1.45vw,19px)/1 var(--display);letter-spacing:-.01em;color:var(--wine-ink);white-space:nowrap;text-decoration:none;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 10px 24px -14px rgba(0,0,0,.6);transition:transform .25s ease}
+.chip:hover{transform:translateX(4px)}
+.chip svg{width:18px;height:18px}
+.chip.c1{background:var(--rose)} .chip.c2{background:var(--butter)} .chip.c3{background:var(--aqua)}
+.wire{flex:1;height:8px;border-radius:8px;margin-left:-6px;background:linear-gradient(90deg,rgba(242,198,207,.45),rgba(242,198,207,.04))}
+.stat{position:absolute;right:clamp(24px,3.4vw,48px);top:clamp(22px,2.6vw,36px);text-align:right;color:var(--blush);z-index:1}
+.stat b{display:block;font:800 clamp(56px,6.6vw,92px)/.85 var(--display);letter-spacing:-.05em}
+.stat span{display:block;font-size:13px;line-height:1.35;color:#F7DCE2;max-width:150px;margin-left:auto;margin-top:8px}
+.portrait{position:absolute;right:clamp(110px,11vw,170px);bottom:0;width:clamp(320px,31vw,440px);z-index:3;
+  clip-path:inset(-60% 0 0 0);pointer-events:none}
+.portrait img{width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(40,6,14,.35))}
+.portrait-tag{position:absolute;right:clamp(24px,3.4vw,48px);bottom:clamp(18px,2vw,28px);z-index:4;background:var(--paper);color:var(--ink);border-radius:999px;padding:9px 14px 9px 10px;font:600 13px/1 var(--body);display:flex;align-items:center;gap:8px;box-shadow:0 12px 28px -12px rgba(0,0,0,.45)}
+.portrait-tag i{width:10px;height:10px;border-radius:50%;background:#2FA36B;box-shadow:0 0 0 4px rgba(47,163,107,.18)}
+
+/* Marquee */
+.marquee{overflow:hidden;padding:clamp(22px,2.6vw,34px) 0 clamp(20px,2.4vw,30px);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;gap:34px;width:max-content;animation:roll 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{display:flex;align-items:center;gap:34px;font:500 clamp(24px,2.6vw,36px)/1 var(--display);letter-spacing:-.02em;white-space:nowrap;color:var(--ink)}
+.marquee svg{width:34px;height:34px;color:var(--wine)}
+@keyframes roll{to{transform:translateX(-50%)}}
+
+/* Sections */
+section{scroll-margin-top:80px}
+.section{padding:clamp(72px,9vw,128px) 0}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--wine)}
+.kicker::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.h2{font-size:clamp(38px,5.2vw,70px);margin-top:18px;max-width:16ch}
+.lead{font-size:clamp(18px,1.6vw,21px);line-height:1.6;color:var(--ink-soft);max-width:60ch}
+
+/* Diferencial */
+.diff{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(36px,6vw,96px);align-items:end}
+.diff .lead+.lead{margin-top:18px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(48px,6vw,80px);border-top:1.5px solid var(--ink)}
+.pillar{padding:28px 28px 0 0}
+.pillar+.pillar{padding-left:28px;border-left:1px solid var(--line)}
+.pillar .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--paper-2);color:var(--wine)}
+.pillar .ico svg{width:24px;height:24px}
+.pillar h3{font-size:24px;margin-top:20px;letter-spacing:-.02em}
+.pillar p{margin-top:8px;color:var(--ink-soft)}
+
+/* Serviços */
+.services{background:var(--paper-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(40px,5vw,64px)}
+.svc{position:relative;background:var(--paper);border-radius:var(--radius-l);padding:30px 28px 26px;display:flex;flex-direction:column;min-height:270px;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
+.svc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(76,18,32,.35)}
+.svc .num{font:700 14px/1 var(--display);color:var(--muted)}
+.svc h3{font-size:clamp(26px,2.4vw,32px);margin-top:28px;letter-spacing:-.03em}
+.svc p{margin-top:10px;color:var(--ink-soft)}
+.svc .go{margin-top:auto;padding-top:24px;font:600 15px/1 var(--body);color:var(--wine);display:flex;align-items:center;gap:8px}
+.svc .go svg{width:18px;height:18px;transition:transform .2s}
+.svc:hover .go svg{transform:translateX(4px)}
+.svc.feature{background:var(--wine);color:#fff}
+.svc.feature .num{color:var(--blush)} .svc.feature p{color:#F3D9DF} .svc.feature .go{color:var(--butter)}
+.svc .dot{position:absolute;top:26px;right:26px;width:14px;height:14px;border-radius:50%}
+.region{margin-top:16px;border-radius:var(--radius-l);padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:inset 0 0 0 1.5px var(--line);background:var(--paper)}
+.region p{display:flex;align-items:center;gap:12px;font-weight:500}
+.region svg{width:22px;height:22px;color:var(--wine);flex:none}
+
+/* Felinos */
+.felinos-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center}
+.cat-photo{position:relative}
+.cat-photo img{width:100%;aspect-ratio:1.12;object-fit:cover;border-radius:var(--radius-xl)}
+.cat-photo figcaption{position:absolute;left:20px;bottom:20px;background:var(--paper);border-radius:16px;padding:12px 16px;font-size:14px;line-height:1.35;max-width:250px;box-shadow:0 16px 30px -18px rgba(0,0,0,.5)}
+.cat-photo figcaption b{font-family:var(--display);font-size:16px;display:block}
+.felinos blockquote{margin:28px 0 0;padding:0 0 0 22px;border-left:3px solid var(--aqua);font:500 clamp(19px,1.7vw,22px)/1.55 var(--body);color:var(--ink-soft)}
+.steps-mini{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.steps-mini span{font:600 14px/1 var(--body);padding:11px 16px;border-radius:999px;background:var(--paper-2)}
+
+/* Sobre */
+.about{background:var(--wine);color:#fff;border-radius:clamp(28px,4vw,56px);margin:0 clamp(8px,1.2vw,16px);overflow:hidden}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,96px);align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;aspect-ratio:.82;object-fit:cover;object-position:center 40%;border-radius:var(--radius-l)}
+.about-photo .stamp{position:absolute;right:-18px;bottom:30px;background:var(--butter);color:var(--wine-ink);border-radius:999px;padding:14px 20px;font:700 15px/1.15 var(--display);transform:rotate(-4deg);box-shadow:0 18px 30px -16px rgba(0,0,0,.5)}
+.about .kicker{color:var(--blush)}
+.about .h2{color:#fff}
+.about-text p{font-size:clamp(17px,1.4vw,19px);line-height:1.7;color:#F6E3E7;margin-top:18px;max-width:58ch}
+.about-text p:first-of-type{margin-top:28px}
+.sign{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.2);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.sign b{font:700 22px/1.1 var(--display)} .sign small{display:block;color:var(--blush);font-size:14px;margin-top:4px}
+
+/* Formação */
+.numbers{display:grid;grid-template-columns:repeat(5,1fr);margin-top:clamp(40px,5vw,64px);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.numbers div{padding:28px 20px 28px 0}
+.numbers div+div{padding-left:20px;border-left:1px solid var(--line)}
+.numbers b{display:block;font:800 clamp(40px,4.4vw,62px)/.9 var(--display);letter-spacing:-.05em;color:var(--wine)}
+.numbers span{display:block;margin-top:12px;font-size:15px;line-height:1.4;color:var(--ink-soft)}
+.places{margin-top:22px;font-size:15px;color:var(--muted)}
+.places strong{color:var(--ink);font-weight:600}
+.practice{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(48px,6vw,80px)}
+.practice figure{margin:0}
+.practice img{width:100%;aspect-ratio:.78;object-fit:cover;border-radius:var(--radius-m);background:var(--paper-2)}
+.practice figcaption{margin-top:14px;font-size:15px;line-height:1.45;color:var(--ink-soft)}
+.practice figcaption b{display:block;font:700 18px/1.2 var(--display);color:var(--ink);margin-bottom:4px;letter-spacing:-.01em}
+
+/* Sinais */
+.signals{background:var(--paper-2)}
+.signals-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,90px);align-items:start}
+.signal-list{list-style:none;margin:0;padding:0}
+.signal-list li{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.signal-list li:first-child{border-top:1.5px solid var(--ink)}
+.signal-list .tag{font:700 13px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;padding:9px 12px;border-radius:999px;height:max-content;color:var(--wine-ink)}
+.signal-list h3{font-size:22px;letter-spacing:-.02em}
+.signal-list p{margin-top:6px;color:var(--ink-soft)}
+.signals-note{margin-top:20px;font-size:14px;color:var(--muted)}
+
+/* Depoimentos */
+.testi-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:clamp(40px,5vw,64px)}
+.t-main{background:var(--blush);border-radius:var(--radius-xl);padding:clamp(28px,4vw,52px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,3vw,40px);align-items:center}
+.t-main img{width:clamp(130px,14vw,190px);aspect-ratio:.78;object-fit:cover;border-radius:var(--radius-m)}
+.t-main blockquote{margin:0;font:600 clamp(22px,2.3vw,30px)/1.3 var(--display);letter-spacing:-.02em;color:var(--wine-ink)}
+.t-who{margin-top:20px;font-size:15px;color:var(--wine)}
+.t-who b{color:var(--wine-ink)}
+.t-side{display:grid;gap:16px}
+.t-card{background:var(--paper);border-radius:var(--radius-l);padding:28px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.t-card blockquote{margin:0;font-size:18px;line-height:1.5}
+.t-card .t-who{color:var(--muted);margin-top:14px}
+.t-card .t-who b{color:var(--ink)}
+.stars{display:flex;gap:3px;color:var(--wine);margin-bottom:14px}
+.stars svg{width:16px;height:16px}
+
+/* Como funciona */
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(40px,5vw,64px);counter-reset:s}
+.how li{list-style:none;background:var(--paper-2);border-radius:var(--radius-l);padding:28px 26px 30px;position:relative}
+.how li::before{counter-increment:s;content:"0" counter(s);font:800 44px/1 var(--display);letter-spacing:-.05em;color:var(--wine)}
+.how h3{font-size:22px;margin-top:22px;letter-spacing:-.02em}
+.how p{margin-top:8px;color:var(--ink-soft);font-size:16px}
+.how{padding:0}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,90px)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1.5px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:700 clamp(19px,1.7vw,22px)/1.3 var(--display);letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:34px;height:34px;flex:none;border-radius:50%;background:var(--paper-2);display:grid;place-items:center;transition:transform .25s,background .25s}
+.faq summary .pm svg{width:16px;height:16px}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--blush)}
+.faq details p{padding:0 54px 26px 0;color:var(--ink-soft)}
+
+/* CTA final */
+.final{padding:clamp(20px,3vw,40px) 0 clamp(60px,8vw,100px)}
+.final-box{position:relative;background:var(--wine);color:#fff;border-radius:var(--radius-xl);padding:clamp(40px,6vw,88px);overflow:hidden}
+.final-box h2{font-size:clamp(40px,5.6vw,80px);max-width:14ch;color:#fff}
+.final-box p{margin-top:20px;color:#F3D9DF;max-width:50ch;font-size:clamp(17px,1.5vw,20px)}
+.final-box .btn{margin-top:36px}
+.final-paw{position:absolute;right:-40px;bottom:-60px;width:clamp(240px,30vw,420px);color:rgba(242,198,207,.12)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:36px 0 110px;font-size:14px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot a{color:var(--ink);text-decoration:none;font-weight:600}
+.foot a:hover{color:var(--wine)}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#1FAF5A;color:#fff;display:grid;place-items:center;box-shadow:0 16px 30px -12px rgba(0,0,0,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.06)}
+.wa-float svg{width:30px;height:30px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .numbers{grid-template-columns:repeat(3,1fr)}
+  .numbers div:nth-child(4){padding-left:0;border-left:0}
+  .numbers div:nth-child(n+4){border-top:1px solid var(--line)}
+  .practice{grid-template-columns:repeat(2,1fr)}
+  .how{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .hero-top{grid-template-columns:1fr}
+  .hero-note{padding-top:6px;max-width:520px}
+  .stage{margin-top:28px}
+  .card{min-height:auto;display:flex;flex-direction:column;padding:28px 22px 0}
+  .stat{position:static;text-align:left;order:1}
+  .stat span{margin-left:0;max-width:none}
+  .services-rail{position:static;transform:none;width:auto;order:2;margin-top:34px;gap:12px}
+  .rail-cta{margin-top:10px}
+  .rail-item:nth-child(n){margin-left:0}
+  .wire{display:none}
+  .portrait{position:relative;right:auto;order:3;width:min(92%,440px);margin:18px auto 0;clip-path:none}
+  .portrait-tag{right:auto;left:12px;bottom:14px}
+  .diff,.felinos-grid,.about-grid,.signals-grid,.faq-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .pillar,.pillar+.pillar{padding:24px 0;border-left:0}
+  .pillar+.pillar{border-top:1px solid var(--line)}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .about-photo{max-width:440px}
+  .about-photo .stamp{right:12px}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .nav-cta .pill-link:not(.solid){display:none}
+  .brand-logo{height:46px}
+  .mega{font-size:clamp(56px,19.5vw,120px)}
+  .svc-grid,.practice,.how{grid-template-columns:1fr}
+  .svc{min-height:0}
+  .numbers{grid-template-columns:1fr 1fr}
+  .numbers div:nth-child(n){padding:22px 14px 22px 0;border-left:0}
+  .numbers div:nth-child(even){padding-left:14px;border-left:1px solid var(--line)}
+  .numbers div:nth-child(n+3){border-top:1px solid var(--line)}
+  .t-main{grid-template-columns:1fr}
+  .faq details p{padding-right:0}
+  .chip{font-size:16px;padding:13px 18px}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="6.2" cy="10" rx="2.1" ry="2.7"/><ellipse cx="10" cy="6" rx="2.1" ry="2.8"/><ellipse cx="14.4" cy="6" rx="2.1" ry="2.8"/><ellipse cx="18" cy="10" rx="2.1" ry="2.7"/><path d="M12.2 11.2c2.6 0 5.6 3.4 5.6 6 0 2-1.6 2.8-3.1 2.8-1 0-1.6-.5-2.5-.5s-1.5.5-2.5.5c-1.5 0-3.1-.8-3.1-2.8 0-2.6 3-6 5.6-6Z"/></g></symbol>
+  <symbol id="i-dog" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c-4 0-7 3-7 7 0 2 1 4 3 4l2-3"/><path d="M28 11c4 0 7 3 7 7 0 2-1 4-3 4l-2-3"/><path d="M10 17c0-5 4.5-8 10-8s10 3 10 8v6c0 5-4.5 9-10 9s-10-4-10-9Z"/><circle cx="16" cy="19" r="1.2" fill="currentColor"/><circle cx="24" cy="19" r="1.2" fill="currentColor"/><path d="M18 25h4l-2 2Z" fill="currentColor"/><path d="M20 27v2"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="i-steth" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M10 12v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="10" r="2"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 5h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H10l-5 4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="9" cy="11" r="1" fill="currentColor"/><circle cx="12.5" cy="11" r="1" fill="currentColor"/><circle cx="16" cy="11" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" fill="currentColor"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3Z"/></symbol>
+</svg>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#inicio" aria-label="LS Medicina Veterinária, Leticia Vets, início">
+      <img class="brand-logo" src="assets/logo-ls.webp" width="307" height="160" alt="LS Medicina Veterinária">
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="pill-link" href="https://instagram.com/leticiavets" target="_blank" rel="noopener">@leticiavets</a>
+      <a class="pill-link solid" data-wa="Olá, Leticia! Vim pelo seu site e gostaria de agendar um cuidado para o meu pet." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20cuidado%20para%20o%20meu%20pet." target="_blank" rel="noopener">Agendar</a>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow" aria-hidden="true">Seu pet cuidado</p>
+        <h1 class="mega" id="hero-title"><span class="sr-only">Seu pet cuidado em casa por uma médica veterinária. </span><span aria-hidden="true">EM CASA</span></h1>
+      </div>
+      <div class="hero-note">
+        <span class="note-badge"><svg><use href="#i-down"/></svg></span>
+        <div>
+          <p><strong style="color:var(--ink)">Por uma médica veterinária</strong> que sabe reconhecer quando algo não vai bem.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="ring">
+        <div class="card">
+          <div class="stat"><b>24h</b><span>de vivência em hospitais com plantão e internação</span></div>
+
+          <ul class="services-rail" aria-label="Principais cuidados" style="list-style:none;margin:0;padding:0">
+            <li class="rail-item"><a class="chip c1" href="#servicos"><svg><use href="#i-paw"/></svg>Visitas em casa</a><span class="wire" aria-hidden="true"></span></li>
+            <li class="rail-item"><a class="chip c2" href="#servicos"><svg><use href="#i-paw"/></svg>Medicação no horário</a><span class="wire" aria-hidden="true"></span></li>
+            <li class="rail-item"><a class="chip c3" href="#felinos"><svg><use href="#i-paw"/></svg>Hospedagem felina</a><span class="wire" aria-hidden="true"></span></li>
+            <li class="rail-cta">
+              <a class="btn btn-light" data-wa="Olá, Leticia! Vi no seu site que você cuida de pets em casa e quero agendar um atendimento para o meu pet." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vi%20no%20seu%20site%20que%20voc%C3%AA%20cuida%20de%20pets%20em%20casa%20e%20quero%20agendar%20um%20atendimento%20para%20o%20meu%20pet." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+              <a class="rail-more" href="#servicos">Conhecer os serviços <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </li>
+          </ul>
+
+          <div class="portrait">
+            <img src="assets/leticia-hero.webp" width="452" height="492" alt="Leticia Oliveira Silva, médica veterinária, sorrindo, com jaleco bordô bordado LS Medicina Veterinária" fetchpriority="high">
+          </div>
+          <span class="portrait-tag"><i></i>CRMV-GO nº ____</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Cuidado em casa <svg><use href="#i-dog"/></svg> Pet sitting veterinário <svg><use href="#i-dog"/></svg> Medicação no horário <svg><use href="#i-dog"/></svg> Adaptação felina <svg><use href="#i-dog"/></svg> Cães e gatos <svg><use href="#i-dog"/></svg> Amor, ciência e responsabilidade <svg><use href="#i-dog"/></svg></span>
+      <span>Cuidado em casa <svg><use href="#i-dog"/></svg> Pet sitting veterinário <svg><use href="#i-dog"/></svg> Medicação no horário <svg><use href="#i-dog"/></svg> Adaptação felina <svg><use href="#i-dog"/></svg> Cães e gatos <svg><use href="#i-dog"/></svg> Amor, ciência e responsabilidade <svg><use href="#i-dog"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section class="section" id="diferencial" aria-labelledby="diff-title">
+  <div class="wrap">
+    <div class="diff reveal">
+      <div>
+        <span class="kicker">O diferencial</span>
+        <h2 class="h2" id="diff-title">Carinho de pet sitter. Responsabilidade de veterinária.</h2>
+      </div>
+      <div>
+        <p class="lead">Deixar o seu pet com alguém é um ato de confiança. Por isso, quem vai à sua casa não é só uma pessoa que gosta de animais. É uma médica veterinária.</p>
+        <p class="lead">Eu sigo a rotina dele, dou a medicação no horário certo, observo como ele come, bebe e se comporta, e percebo os sinais que costumam passar despercebidos. Para mim, amar os animais vai muito além do carinho: é estudar, observar e cuidar com responsabilidade.</p>
+      </div>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><span class="ico"><svg><use href="#i-home"/></svg></span><h3>No conforto do lar</h3><p>Sem transporte, sem gaiola, sem estresse. O pet fica no lugar que ele conhece.</p></div>
+      <div class="pillar"><span class="ico"><svg><use href="#i-steth"/></svg></span><h3>Olhar clínico em cada visita</h3><p>Temperatura, hidratação, apetite e comportamento observados com atenção.</p></div>
+      <div class="pillar"><span class="ico"><svg><use href="#i-chat"/></svg></span><h3>Você sempre informado</h3><p>Fotos e notícias a cada visita, para você ficar tranquilo de onde estiver.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section services" id="servicos" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div>
+        <span class="kicker">Como posso ajudar</span>
+        <h2 class="h2" id="svc-title">Cuidado para cada momento do seu pet.</h2>
+      </div>
+      <p class="lead" style="max-width:38ch">Escolha a situação mais parecida com a sua e me chame. A gente combina tudo pela rotina dele.</p>
+    </div>
+
+    <div class="svc-grid">
+      <a class="svc feature reveal" data-wa="Olá, Leticia! Vou viajar e gostaria de agendar visitas em casa para o meu pet (alimentação, passeio e companhia). Quais datas você tem disponíveis?" href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vou%20viajar%20e%20gostaria%20de%20agendar%20visitas%20em%20casa%20para%20o%20meu%20pet%20%28alimenta%C3%A7%C3%A3o%2C%20passeio%20e%20companhia%29.%20Quais%20datas%20voc%C3%AA%20tem%20dispon%C3%ADveis%3F" target="_blank" rel="noopener">
+        <span class="num">01</span><span class="dot" style="background:var(--rose)"></span>
+        <h3>Vai viajar?</h3>
+        <p>Visitas diárias com alimentação, água fresca, limpeza, brincadeiras e passeio.</p>
+        <span class="go">Quero esse cuidado <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc reveal" data-wa="Olá, Leticia! Meu pet toma medicação e preciso de ajuda para dar os remédios no horário certo. Pode me ajudar?" href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Meu%20pet%20toma%20medica%C3%A7%C3%A3o%20e%20preciso%20de%20ajuda%20para%20dar%20os%20rem%C3%A9dios%20no%20hor%C3%A1rio%20certo.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">
+        <span class="num">02</span><span class="dot" style="background:var(--butter)"></span>
+        <h3>Pet que toma remédio</h3>
+        <p>Medicação no horário, inclusive para idosos e crônicos, como diabéticos.</p>
+        <span class="go">Quero esse cuidado <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc reveal" data-wa="Olá, Leticia! Vi no seu site a hospedagem para gatos e gostaria de saber como funciona para o meu gato." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vi%20no%20seu%20site%20a%20hospedagem%20para%20gatos%20e%20gostaria%20de%20saber%20como%20funciona%20para%20o%20meu%20gato." target="_blank" rel="noopener">
+        <span class="num">03</span><span class="dot" style="background:var(--aqua)"></span>
+        <h3>Hospedagem para gatos</h3>
+        <p>Um lar tranquilo e uma adaptação no ritmo dele.</p>
+        <span class="go">Quero esse cuidado <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc reveal" data-wa="Olá, Leticia! Vou apresentar um gato novo em casa e gostaria da sua orientação para a adaptação entre eles." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vou%20apresentar%20um%20gato%20novo%20em%20casa%20e%20gostaria%20da%20sua%20orienta%C3%A7%C3%A3o%20para%20a%20adapta%C3%A7%C3%A3o%20entre%20eles." target="_blank" rel="noopener">
+        <span class="num">04</span><span class="dot" style="background:var(--blush)"></span>
+        <h3>Adaptação entre gatos</h3>
+        <p>Orientação passo a passo para apresentar um novo gato, presencial ou à distância.</p>
+        <span class="go">Quero esse cuidado <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <!-- VALIDAR COM A CLIENTE: serviço implícito (exame físico, pressão, vacinas) -->
+      <a class="svc reveal" data-wa="Olá, Leticia! Gostaria de agendar uma avaliação e acompanhamento do meu pet em casa." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20e%20acompanhamento%20do%20meu%20pet%20em%20casa." target="_blank" rel="noopener">
+        <span class="num">05</span><span class="dot" style="background:var(--rose)"></span>
+        <h3>Avaliação e acompanhamento em casa</h3>
+        <p>Exame físico, aferição de pressão e orientação sobre vacinas.</p>
+        <span class="go">Quero esse cuidado <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <!-- VALIDAR COM A CLIENTE: serviço implícito (pós-operatório) -->
+      <a class="svc reveal" data-wa="Olá, Leticia! Meu pet passou por uma cirurgia e preciso de ajuda com os cuidados do pós-operatório em casa." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Meu%20pet%20passou%20por%20uma%20cirurgia%20e%20preciso%20de%20ajuda%20com%20os%20cuidados%20do%20p%C3%B3s-operat%C3%B3rio%20em%20casa." target="_blank" rel="noopener">
+        <span class="num">06</span><span class="dot" style="background:var(--butter)"></span>
+        <h3>Pós-operatório em casa</h3>
+        <p>Curativos, colar, medicação e monitoramento na recuperação.</p>
+        <span class="go">Quero esse cuidado <svg><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+
+    <div class="region reveal">
+      <p><svg><use href="#i-pin"/></svg>Atendo cães e gatos na região do Setor Novo Horizonte, Vila Boa e arredores.</p>
+      <a class="btn btn-ghost" data-wa="Olá, Leticia! Você atende na minha região? Meu bairro é: " href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Voc%C3%AA%20atende%20na%20minha%20regi%C3%A3o%3F%20Meu%20bairro%20%C3%A9%3A%20" target="_blank" rel="noopener">Consultar minha região</a>
+    </div>
+  </div>
+</section>
+
+<!-- FELINOS -->
+<section class="section felinos" id="felinos" aria-labelledby="cat-title">
+  <div class="wrap felinos-grid">
+    <figure class="cat-photo reveal" style="margin:0">
+      <img src="assets/mirosmar.webp" width="862" height="700" loading="lazy" alt="Mirosmar, gato laranja e branco, deitado tranquilo e olhando para cima">
+      <figcaption><b>Mirosmar</b>Meu primeiro hóspede, que ganhou confiança aos poucos.</figcaption>
+    </figure>
+    <div class="reveal">
+      <span class="kicker">Para os felinos</span>
+      <h2 class="h2" id="cat-title">Cada gatinho tem o seu tempo.</h2>
+      <p class="lead" style="margin-top:24px">Gatos sentem a mudança de rotina mais do que a gente imagina. Por isso, eu não forço contato: deixo que ele me conheça, explore e ganhe confiança. Pequenos avanços fazem toda a diferença.</p>
+      <blockquote>“No começo, é normal sentir medo, se esconder e estranhar os cheiros e a rotina. O mais importante é ir com calma, permitindo que ele explore tudo no seu próprio ritmo.”</blockquote>
+      <div class="steps-mini"><span>Sem forçar contato</span><span>Rotina respeitada</span><span>Adaptação segura</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section about" id="sobre" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <!-- Confirmar com a cliente a autorização para contar a história da Juju -->
+      <img src="assets/leticia-juju.webp" width="572" height="830" loading="lazy" alt="Leticia na formatura, de beca e capelo, abraçando a Juju, sua poodle branca, também de capelo">
+      <span class="stamp">Com a Juju,<br>16 anos de amor</span>
+    </div>
+    <div class="about-text reveal">
+      <span class="kicker">Quem cuida</span>
+      <h2 class="h2" id="about-title">Prazer, sou a Leticia.</h2>
+      <p>Por 16 anos, a Juju foi a minha companheira. Foi com ela que eu aprendi o que é amor, cuidado e lealdade, e foi por ela que eu escolhi a Medicina Veterinária.</p>
+      <p>Na faculdade, eu quis viver tudo: fiz estágio em hospitais 24 horas, acompanhei plantões de madrugada, internações, cirurgias e exames de pacientes graves. Fui monitora de Clínica Médica e presidi o Grupo de Estudos de Pequenos Animais da PUC Goiás.</p>
+      <p>Hoje, como médica veterinária, levo essa experiência para dentro da sua casa. Cuido do seu pet com a atenção que eu gostaria que tivessem com a minha Juju: com amor, ciência e responsabilidade.</p>
+      <div class="sign">
+        <div><b>Leticia Oliveira Silva</b><small>Médica Veterinária · CRMV-GO nº ____</small></div>
+        <a class="btn btn-light" href="#formacao">Conhecer minha trajetória <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAÇÃO -->
+<section class="section" id="formacao" aria-labelledby="form-title">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Formação de hospital</span>
+      <h2 class="h2" id="form-title">Experiência vivida onde o cuidado é mais exigente.</h2>
+    </div>
+    <div class="numbers reveal">
+      <div><b>4</b><span>hospitais e clínicas de estágio</span></div>
+      <div><b>24h</b><span>plantões e internação</span></div>
+      <div><b>2</b><span>monitorias acadêmicas</span></div>
+      <div><b>GEPA</b><span>presidente do grupo de estudos da PUC Goiás</span></div>
+      <div><b>CBA</b><span>congressista no Congresso Brasileiro Anclivepa 2026</span></div>
+    </div>
+    <!-- Confirmar com a cliente quais nomes podem ser citados -->
+    <p class="places reveal">Vivência em <strong>Hospital Veterinário Leão</strong> · <strong>Hospital Veterinário Fênix</strong> · <strong>PetVip</strong> · <strong>São Francisco</strong> · <strong>Hospital do Gato</strong></p>
+
+    <div class="practice">
+      <figure class="reveal"><img src="assets/doppler.webp" width="480" height="640" loading="lazy" alt="Leticia aferindo a pressão arterial de um cão com Doppler, segurando-o com carinho"><figcaption><b>Pressão arterial</b>Um sinal vital que eu monitoro em pets idosos.</figcaption></figure>
+      <figure class="reveal"><img src="assets/hemogasometria.webp" width="485" height="760" loading="lazy" alt="Amostra de sangue sendo analisada em aparelho de hemogasometria"><figcaption><b>Pacientes críticos</b>Experiência com pacientes críticos em hospital 24h.</figcaption></figure>
+      <figure class="reveal"><img src="assets/hospital-do-gato.webp" width="244" height="416" loading="lazy" alt="Radiografia de um felino durante procedimento cirúrgico no Hospital do Gato"><figcaption><b>Medicina felina</b>Participei de cirurgias e exames avançados em felinos.</figcaption></figure>
+      <figure class="reveal"><img src="assets/estagio.webp" width="350" height="394" loading="lazy" alt="Leticia sorrindo e abraçando um filhote de cão caramelo durante o estágio"><figcaption><b>Carinho na rotina</b>Cada paciente tratado com calma, pelo nome e com afeto.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SINAIS -->
+<section class="section signals" id="sinais" aria-labelledby="sig-title">
+  <div class="wrap signals-grid">
+    <div class="reveal">
+      <span class="kicker">Olhar atento</span>
+      <h2 class="h2" id="sig-title">Sinais que merecem atenção.</h2>
+      <p class="lead" style="margin-top:24px">Muitas doenças começam em silêncio. Perceber cedo faz toda a diferença na qualidade de vida do seu pet.</p>
+      <a class="btn btn-primary" style="margin-top:32px" data-wa="Olá, Leticia! Notei um sinal diferente no meu pet (água, apetite, peso ou febre) e queria conversar com você." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Notei%20um%20sinal%20diferente%20no%20meu%20pet%20%28%C3%A1gua%2C%20apetite%2C%20peso%20ou%20febre%29%20e%20queria%20conversar%20com%20voc%C3%AA." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Notou algo assim? Fale comigo</a>
+    </div>
+    <div class="reveal">
+      <ul class="signal-list">
+        <li><span class="tag" style="background:var(--aqua)">Água</span><div><h3>Bebe muita água e faz muito xixi</h3><p>Pode indicar diabetes ou alterações hormonais.</p></div></li>
+        <li><span class="tag" style="background:var(--butter)">Peso</span><div><h3>Emagrece mesmo comendo bem</h3><p>Merece atenção e uma avaliação.</p></div></li>
+        <li><span class="tag" style="background:var(--rose)">Febre</span><div><h3>Temperatura acima do normal</h3><p>Acima de 39,2 °C em cães e 39,3 °C em gatos.</p></div></li>
+        <li><span class="tag" style="background:var(--blush)">Vacinas</span><div><h3>Vacinas atrasadas</h3><p>Risco de cinomose, parvovirose e panleucopenia.</p></div></li>
+      </ul>
+      <p class="signals-note">Conteúdo informativo. Não substitui a avaliação de um médico veterinário.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section" id="depoimentos" aria-labelledby="dep-title">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Quem confia</span>
+      <h2 class="h2" id="dep-title">Confiança que vem de quem conhece o meu trabalho.</h2>
+    </div>
+    <div class="testi-grid">
+      <figure class="t-main reveal" style="margin:0">
+        <img src="assets/bella-luna.webp" width="146" height="194" loading="lazy" alt="As gatas Bella e Luna deitadas juntas, abraçadas">
+        <div>
+          <blockquote>“Com uma ajuda profissional, ficou tudo mais fácil. Hoje a Bella não fica sem a Luna e vice-versa.”</blockquote>
+          <figcaption class="t-who"><b>Lariza Ingryd</b> · tutora da Bella e da Luna, acompanhada à distância</figcaption>
+        </div>
+      </figure>
+      <div class="t-side">
+        <figure class="t-card reveal" style="margin:0">
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>“Profissional excelente. Indico e confio muito. Competência e ética.”</blockquote>
+          <figcaption class="t-who"><b>Prof. Dr. Iago Martins</b> · médico veterinário e professor</figcaption>
+        </figure>
+        <figure class="t-card reveal" style="margin:0">
+          <blockquote>“Você é fora da curva.”</blockquote>
+          <figcaption class="t-who"><b>Prof. Camila França</b> · médica veterinária e professora</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona" aria-labelledby="how-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Como funciona</span>
+      <h2 class="h2" id="how-title">Simples do primeiro contato à primeira visita.</h2>
+    </div>
+    <ol class="how">
+      <li class="reveal"><h3>Você me chama</h3><p>Pelo WhatsApp, contando um pouco sobre o seu pet.</p></li>
+      <li class="reveal"><h3>A gente conversa</h3><p>Sobre a rotina, a alimentação e a saúde dele.</p></li>
+      <li class="reveal"><h3>Visita de apresentação</h3><p>Para ele me conhecer e combinarmos todos os detalhes.</p></li>
+      <li class="reveal"><h3>Cuidado com notícias</h3><p>Você recebe fotos e mensagens a cada visita.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="duvidas" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="kicker">Dúvidas</span>
+      <h2 class="h2" id="faq-title">Perguntas frequentes.</h2>
+    </div>
+    <div class="reveal">
+      <details><summary>Você é veterinária mesmo?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sim. Sou médica veterinária formada pela PUC Goiás, com registro ativo no CRMV-GO nº ____.</p></details>
+      <details><summary>Atende gatos que não gostam de estranhos?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sim, no ritmo deles. Eu não forço contato: deixo que o gato me conheça aos poucos, até se sentir seguro.</p></details>
+      <!-- VALIDAR COM A CLIENTE: aplicação de insulina -->
+      <details><summary>Pode dar medicação e insulina?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Sim. Dou a medicação no horário prescrito, inclusive para pets idosos e crônicos, como os diabéticos.</p></details>
+      <!-- VALIDAR COM A CLIENTE: regiões atendidas -->
+      <details><summary>Que regiões você atende?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Atendo na região do Setor Novo Horizonte, Vila Boa e arredores, em Goiânia. Me chame no WhatsApp para confirmar o seu bairro.</p></details>
+      <details><summary>E se meu pet passar mal durante a viagem?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Eu reconheço os sinais, falo com você na hora e oriento ou encaminho ao atendimento adequado.</p></details>
+      <details><summary>Como recebo notícias?<span class="pm"><svg><use href="#i-plus"/></svg></span></summary><p>Por fotos e mensagens a cada visita, pelo WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final" id="contato" aria-labelledby="final-title">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <svg class="final-paw" aria-hidden="true"><use href="#i-paw"/></svg>
+      <h2 id="final-title">Viaje tranquilo. Seu pet fica em casa, com quem entende de cuidado.</h2>
+      <p>Me conte sobre o seu pet e a rotina dele. Respondo pelo WhatsApp para combinarmos tudo.</p>
+      <a class="btn btn-light" data-wa="Olá, Leticia! Vou viajar e quero deixar meu pet em casa com você. Podemos combinar os detalhes?" href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vou%20viajar%20e%20quero%20deixar%20meu%20pet%20em%20casa%20com%20voc%C3%AA.%20Podemos%20combinar%20os%20detalhes%3F" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Falar com a Leticia no WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>© <span id="ano">2026</span> Leticia Oliveira Silva · Médica Veterinária · CRMV-GO nº ____ · Goiânia – GO</p>
+    <p><a href="https://instagram.com/leticiavets" target="_blank" rel="noopener">Instagram @leticiavets</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="Olá, Leticia! Vim pelo seu site e tenho uma dúvida sobre os cuidados para o meu pet." href="https://wa.me/5562981589103?text=Ol%C3%A1%2C%20Leticia%21%20Vim%20pelo%20seu%20site%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20cuidados%20para%20o%20meu%20pet." target="_blank" rel="noopener" aria-label="Falar com a Leticia no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+  document.body.classList.remove('no-js');
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
